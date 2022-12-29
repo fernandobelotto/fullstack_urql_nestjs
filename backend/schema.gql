@@ -1,0 +1,33 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Todo {
+  """Here is the title of the todo"""
+  title: String!
+
+  """The id of the todo"""
+  id: ID!
+}
+
+type Query {
+  todos: [Todo!]!
+  todo(id: Int!): Todo!
+}
+
+type Mutation {
+  createTodo(createTodoInput: CreateTodoInput!): Todo!
+  updateTodo(updateTodoInput: UpdateTodoInput!): Todo!
+  removeTodo(id: Int!): Todo!
+}
+
+input CreateTodoInput {
+  """Example field (placeholder)"""
+  title: String!
+}
+
+input UpdateTodoInput {
+  """Example field (placeholder)"""
+  title: String!
+  id: ID!
+}
